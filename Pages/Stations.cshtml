@@ -1,0 +1,85 @@
+﻿@page
+@model TexasGuyContract.Pages.StationsModel
+@{
+    ViewData["Title"] = "Stations";
+}
+
+<div class="row align-items-center" style="float:right;">
+    <a asp-page="/Forms/AddStation" class="btn btn-primary mt-2">Add new Station</a>
+</div>
+
+<div>
+    <h1>@ViewData["Title"] (@Model.StationList.Count())</h1>
+</div>
+
+<input type="text" id="stationSearchInput" onkeyup="search('stationSearchInput', 'station-grid', ['station_name', 'email'])" placeholder="Search...">
+
+<p>This page shows you all available stations.</p>
+
+<hr />
+
+<div class="station-grid header">
+    <div>ID</div>
+    <div>Station Name</div>
+    <div>Minutes</div>
+    <div>Lowest</div>
+    <div>Highest</div>
+    <div>Email</div>
+    <div>Edit Station</div>
+    <div>Disabled/Enabled</div>
+</div>
+
+@foreach (var item in Model.StationList)
+{
+    <hr />
+    <div class="station-grid">
+        <div>@item.ID</div>
+        <div class="truncate-text station_name @(item.StationName.Length > 15 ? "long-text" : "") @(item.isEnabled ? "station_enabled" : "station_disabled")">@item.StationName</div>
+        <div>@item.Minutes</div>
+        <div>@item.LowestLevel</div>
+        <div>@item.HighestLevel</div>
+        <div class="truncate-text email @(item.Email.Length > 20 ? "long-text" : "")">@item.Email</div>
+        <div>
+            <a asp-page="/Forms/AddStation" asp-route-id="@item.ID" class="btn btn-primary mt-1">Edit</a>
+        </div>
+        <div>
+            <form method="post" asp-page-handler="UpdateStatus">
+                <input type="hidden" name="id" value="@item.ID" />
+                <input type="hidden" name="isEnabled" value="@(item.isEnabled ? "false" : "true")" />
+                <button type="submit" class="btn @(item.isEnabled ? "btn-danger" : "btn-success") mt-1">
+                    @(item.isEnabled ? "Disable" : "Enable")
+                </button>
+            </form>
+        </div>
+    </div>
+}
+
+@section Scripts {
+    <script src="~/js/search.js"></script>
+}
+
+<style>
+    .station-grid {
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        gap: 1rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header {
+        background-color: paleturquoise;
+        font-weight: bold;
+    }
+
+    .truncate-text {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .long-text {
+        text-align: left;
+    }
+
+</style>

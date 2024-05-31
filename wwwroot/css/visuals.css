@@ -1,0 +1,23 @@
+﻿body {
+}
+
+.station_enabled {
+    color: forestgreen !important;
+}
+
+.station_disabled {
+    color: darkred !important;
+}
+
+.status_flood {
+    color: rebeccapurple;
+}
+
+.status_ok {
+    color: forestgreen;
+}
+
+.status_drought {
+    color: sandybrown;
+}
+

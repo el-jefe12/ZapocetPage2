@@ -1,0 +1,115 @@
+﻿@page
+@model TexasGuyContract.Pages.HistoryModel
+@{
+    ViewData["Title"] = "History";
+}
+
+<div class="row align-items-center" style="float:right;">
+    <a asp-page="/Forms/AddHistoryEntry" class="btn btn-primary mt-2">Add new Entry (Beta)</a>
+</div>
+
+<h1>@ViewData["Title"] (@Model.HistoryList.Count())</h1>
+
+
+<!-- Search bar -->
+<input type="text" id="searchInput" onkeyup="search('searchInput', 'historyRow', ['station_name', 'status'])" placeholder="Search...">
+
+<p>This page shows historical something.</p>
+
+<hr />
+<div class="row" style="background-color: paleturquoise; font-weight: bold;">
+    <div class="col">ID</div>
+    <div class="col">Station Name</div>
+    <div class="col">Value</div>
+    <div class="col">Time</div>
+    <div class="col">Status</div>
+</div>
+
+@foreach (var item in Model.HistoryList)
+{
+    <hr>
+    <div class="row historyRow">
+        <div class="col">@item.ID</div>
+        <div class="col">
+            <span class="station_name">@item.Station.StationName</span>
+        </div>
+        <div class="col">
+            <span class="@GetValueColorClass(item.Value)" style="font-weight: bold;">@item.Value</span>
+        </div>
+        <div class="col">@item.Timestamp</div>
+        <div class="col status">
+            <span class="@GetStatusColorClass(item.Value)"style="font-weight: bold;">@GetStatus(item.Value)</span> <!--Status-->
+        </div>
+    </div>
+}
+
+@functions {
+    // Function to get color class based on value
+    string GetValueColorClass(double value)
+    {
+        string colorClass = "";
+
+        if (value <= 30)
+        {
+            colorClass = "status_drought";
+        }
+        else if (value <= 70)
+        {
+            colorClass = "status_ok";
+        }
+        else
+        {
+            colorClass = "status_flood";
+        }
+
+        return colorClass;
+    }
+
+    // Function to get color class based on status
+    string GetStatusColorClass(double value)
+    {
+        string colorClass = "";
+
+        if (value <= 30)
+        {
+            colorClass = "status_drought";
+        }
+        else if (value <= 70)
+        {
+            colorClass = "status_ok";
+        }
+        else
+        {
+            colorClass = "status_flood";
+        }
+
+        return colorClass;
+    }
+
+    // Function to get status based on value
+    string GetStatus(double value)
+    {
+        string status = "";
+
+        if (value <= 30)
+        {
+            status = "Sucho";
+        }
+        else if (value <= 70)
+        {
+            status = "OK";
+        }
+        else
+        {
+            status = "Povodeň";
+        }
+
+        return status;
+    }
+}
+
+<!-- JavaScript to filter rows based on search input -->
+@section Scripts {
+    <script src="~/js/search.js"></script>
+}
+

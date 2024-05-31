@@ -1,0 +1,39 @@
+﻿@page
+@model TexasGuyContract.Pages.Forms.AddStationModel
+@{
+    ViewData["Title"] = "Add Station";
+}
+
+<form method="post" enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <label asp-for="Station.StationName" class="control-label"></label>
+                <input asp-for="Station.StationName" class="form-control" />
+                <span asp-validation-for="Station.StationName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Station.Minutes" class="control-label"></label>
+                <input asp-for="Station.Minutes" class="form-control" />
+                <span asp-validation-for="Station.Minutes" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Station.LowestLevel" class="control-label"></label>
+                <input asp-for="Station.LowestLevel" class="form-control" />
+                <span asp-validation-for="Station.LowestLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Station.HighestLevel" class="control-label"></label>
+                <input asp-for="Station.HighestLevel" class="form-control" />
+                <span asp-validation-for="Station.HighestLevel" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Station.Email" class="control-label"></label>
+                <input asp-for="Station.Email" class="form-control" />
+                <span asp-validation-for="Station.Email" class="text-danger"></span>
+            </div>
+            <button class="btn btn-primary mt-4" type="submit">Submit</button>
+        </div>
+    </div>
+</form>
+
