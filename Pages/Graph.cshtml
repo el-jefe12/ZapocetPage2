@@ -9,87 +9,27 @@
 
 <hr>
 
-<form method="post" onsubmit="event.preventDefault(); drawChart()">
-    <div class="row">
-        <div class="col-6">
-            <div class="form-group">
-                <label asp-for="HistoryEntry.StationID" class="control-label"></label>
-                @if (Model.Stations != null)
-                {
-                    <select asp-for="HistoryEntry.StationID" class="form-control" asp-items="Model.Stations" id="stationSelect"></select>
-                }
-                else
-                {
-                    <p class="text-danger">No stations available.</p>
-                }
-                <span asp-validation-for="HistoryEntry.StationID" class="text-danger"></span>
-            </div>
-
-            <button class="btn btn-primary mt-4" type="submit">Submit</button>
+<div class="row">
+    <div class="col-6">
+        <div class="form-group">
+            <label asp-for="HistoryEntry.StationID" class="control-label"></label>
+            @if (Model.Stations != null)
+            {
+                <select asp-for="HistoryEntry.StationID" class="form-control" asp-items="@(new SelectList(Model.Stations.Concat(new[] { new SelectListItem { Value = "0", Text = "All Stations" } }), "Value", "Text"))" id="stationSelect"></select>
+            }
+            else
+            {
+                <p class="text-danger">No stations available.</p>
+            }
+            <span asp-validation-for="HistoryEntry.StationID" class="text-danger"></span>
         </div>
     </div>
-</form>
+</div>
 
 <canvas id="myChart" width="400" height="400"></canvas>
 
-<script>
-    async function drawChart() {
-        var stationId = document.getElementById("stationSelect").value;
+<script src="~/js/chart.js"></script>
 
-        // Zavolejte serverovou akci pro načtení dat z databáze souvisejících s vybranou stanicí
-        var response = await fetch('/HistoryEntries?StationID=' + stationId);
-        var responseData = await response.text();
+<script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns@2.0.0/dist/chartjs-adapter-date-fns.bundle.min.js"></script>
 
-        // Ošetření prázdné odpovědi
-        if (!responseData) {
-            console.error("Empty response from the server.");
-            return;
-        }
 
-        var data = JSON.parse(responseData);
-        var timestamps = data.map(entry => new Date(entry.timestamp));
-        var values = data.map(entry => entry.value);
-
-        var ctx = document.getElementById('myChart').getContext('2d');
-        var myChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: timestamps,
-                datasets: [{
-                    label: 'Surface Level',
-                    data: values,
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
-                    borderWidth: 1,
-                    fill: false
-                }]
-            },
-            options: {
-                scales: {
-                    xAxes: [{
-                        type: 'time',
-                        time: {
-                            displayFormats: {
-                                millisecond: 'MMM DD',
-                                second: 'MMM DD',
-                                minute: 'MMM DD',
-                                hour: 'MMM DD',
-                                day: 'MMM DD',
-                                week: 'MMM DD',
-                                month: 'MMM DD',
-                                quarter: 'MMM DD',
-                                year: 'MMM DD',
-                            }
-                        },
-                        distribution: 'series'
-                    }],
-                    yAxes: [{
-                        ticks: {
-                            beginAtZero: true
-                        }
-                    }]
-                }
-            }
-        });
-    }
-</script>

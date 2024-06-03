@@ -9,6 +9,8 @@ using TexasGuyContractIdentity.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+// Retrieve the connection string from the configuration
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
 
@@ -19,11 +21,11 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 // Add database developer page exception filter for detailed errors during development
 builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
-// Configure Identity with default settings
+// Configure Identity with default settings and require confirmed accounts for sign-in
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<ApplicationDbContext>();
 
-// Add HistoryEntryService
+// Add custom service for handling history entries
 builder.Services.AddScoped<HistoryEntryService>();
 
 // Add Hangfire with SQL Server storage
@@ -68,7 +70,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers(); // Map API controllers
 });
 
-// Run the Hangfire job after the application is started
+// Register a Hangfire job to run after the application starts
 app.Services.GetRequiredService<IHostApplicationLifetime>().ApplicationStarted.Register(() =>
 {
     var scopeFactory = app.Services.GetRequiredService<IServiceScopeFactory>();

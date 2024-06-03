@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "G:\\Appky\\TexasGuyContractIdentity\\wwwroot\\js\\chart.js",
+      "PackagePath": "staticwebassets\\js\\chart.js"
+    },
+    {
       "Id": "G:\\Appky\\TexasGuyContractIdentity\\wwwroot\\js\\search.js",
       "PackagePath": "staticwebassets\\js\\search.js"
     },

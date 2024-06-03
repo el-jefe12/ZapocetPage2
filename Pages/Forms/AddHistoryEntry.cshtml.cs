@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace TexasGuyContract.Pages.Forms
     [Authorize]
     public class AddHistoryEntryModel : PageModel
     {
-        private readonly ILogger<AddStationModel> _logger;
+        private readonly ILogger<AddHistoryEntryModel> _logger;
         private readonly ApplicationDbContext _context;
 
         [BindProperty]
@@ -24,7 +25,7 @@ namespace TexasGuyContract.Pages.Forms
         [BindProperty(SupportsGet = true)]
         public int? Id { get; set; }
 
-        public AddHistoryEntryModel(ILogger<AddStationModel> logger, ApplicationDbContext context)
+        public AddHistoryEntryModel(ILogger<AddHistoryEntryModel> logger, ApplicationDbContext context)
         {
             _context = context;
             _logger = logger;
@@ -59,8 +60,6 @@ namespace TexasGuyContract.Pages.Forms
 
             _context.HistoryEntries.Add(HistoryEntry);
             _context.SaveChanges();
-
-            HistoryEntry = new History();
 
             return RedirectToPage("/History");
         }

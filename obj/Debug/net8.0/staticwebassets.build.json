@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pnb2MK8SN4zIYSNcp4920z4CfX0ljx6v+8qN6H4gxxQ=",
+  "Hash": "fxvKkgxeSlNVNphav8ZdEztnjm2LhuCxn6FdKc2lWzc=",
   "Source": "TexasGuyContractIdentity",
   "BasePath": "_content/TexasGuyContractIdentity",
   "Mode": "Default",
@@ -1288,6 +1288,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "G:\\Appky\\TexasGuyContractIdentity\\wwwroot\\js\\chart.js",
+      "SourceId": "TexasGuyContractIdentity",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Appky\\TexasGuyContractIdentity\\wwwroot\\",
+      "BasePath": "_content/TexasGuyContractIdentity",
+      "RelativePath": "js/chart.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\chart.js"
     },
     {
       "Identity": "G:\\Appky\\TexasGuyContractIdentity\\wwwroot\\js\\search.js",
