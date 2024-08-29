@@ -2,20 +2,32 @@
 using System.Net.Mail;
 using System.Threading.Tasks;
 using System;
+using TexasGuyContractIdentity.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace TexasGuyContractIdentity.Services
 {
     public class EmailSender : IEmailSender
     {
-        public EmailSender()
+        private readonly ApplicationDbContext _context;
+
+        public EmailSender(ApplicationDbContext context)
         {
+            _context = context;
         }
 
         public async Task SendEmailAsync(string receiver, string subject, string body)
         {
+            // Fetch the active SMTP configuration
+            var smtpConfig = await _context.SmtpModels.FirstOrDefaultAsync(s => s.is_active);
+            if (smtpConfig == null)
+            {
+                throw new InvalidOperationException("No active SMTP configuration found.");
+            }
+
             using (var mail = new MailMessage())
             {
-                mail.From = new MailAddress("noreply@codeclimber.cz"); // Change to your sender address
+                mail.From = new MailAddress("noreply@texasguycontract.com"); // Set your sender address
                 mail.To.Add(receiver);
                 mail.Subject = subject;
                 mail.Body = body;
@@ -23,11 +35,11 @@ namespace TexasGuyContractIdentity.Services
 
                 try
                 {
-                    using (var smtp = new SmtpClient("localhost", 25)) // Papercut settings
+                    using (var smtp = new SmtpClient("localhost", smtpConfig.Port))
                     {
                         smtp.UseDefaultCredentials = true;
                         smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
-                        smtp.EnableSsl = false; // Papercut doesn't support SSL
+                        smtp.EnableSsl = false; // Modify this if your SMTP requires SSL
                         smtp.Timeout = 10000; // Set timeout to 10 seconds
                         await smtp.SendMailAsync(mail);
                     }

@@ -2,6 +2,8 @@ using Hangfire;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using TexasGuyContractIdentity.Data;
 using TexasGuyContractIdentity.Models.Services;
 using TexasGuyContractIdentity.Services;
@@ -39,6 +41,13 @@ builder.Services.AddControllers();
 // Register EmailSender service
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
+// Add logging
+builder.Services.AddLogging(config =>
+{
+    config.AddConsole();
+    config.AddDebug();
+});
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline
@@ -69,6 +78,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapRazorPages();  // Map Razor Pages
     endpoints.MapControllers(); // Map API controllers
 });
+
 
 // Register a Hangfire job to run after the application starts
 app.Services.GetRequiredService<IHostApplicationLifetime>().ApplicationStarted.Register(() =>

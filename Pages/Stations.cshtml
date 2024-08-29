@@ -16,43 +16,44 @@
 
 <p>This page shows you all available stations.</p>
 
-<hr />
-
-<div class="station-grid header">
-    <div>ID</div>
-    <div>Station Name</div>
-    <div>Minutes</div>
-    <div>Lowest</div>
-    <div>Highest</div>
-    <div>Email</div>
-    <div>Edit Station</div>
-    <div>Disabled/Enabled</div>
-</div>
-
-@foreach (var item in Model.StationList)
-{
-    <hr />
-    <div class="station-grid">
-        <div>@item.ID</div>
-        <div class="truncate-text station_name @(item.StationName.Length > 15 ? "long-text" : "") @(item.isEnabled ? "station_enabled" : "station_disabled")">@item.StationName</div>
-        <div>@item.Minutes</div>
-        <div>@item.LowestLevel</div>
-        <div>@item.HighestLevel</div>
-        <div class="truncate-text email @(item.Email.Length > 20 ? "long-text" : "")">@item.Email</div>
-        <div>
-            <a asp-page="/Forms/AddStation" asp-route-id="@item.ID" class="btn btn-primary mt-1">Edit</a>
-        </div>
-        <div>
-            <form method="post" asp-page-handler="UpdateStatus">
-                <input type="hidden" name="id" value="@item.ID" />
-                <input type="hidden" name="isEnabled" value="@(item.isEnabled ? "false" : "true")" />
-                <button type="submit" class="btn @(item.isEnabled ? "btn-danger" : "btn-success") mt-1">
-                    @(item.isEnabled ? "Disable" : "Enable")
-                </button>
-            </form>
-        </div>
+<!-- Scrollable container for the station list -->
+    <div class="station-grid header navbar-custom">
+        <div>ID</div>
+        <div>Station Name</div>
+        <div>Minutes</div>
+        <div>Lowest</div>
+        <div>Highest</div>
+        <div>Email</div>
+        <div>Edit Station</div>
+        <div>Disabled/Enabled</div>
     </div>
-}
+
+<div class="station-list-container">
+    @foreach (var item in Model.StationList)
+    {
+        <hr />
+        <div class="station-grid">
+            <div>@item.ID</div>
+            <div class="truncate-text station_name @(item.StationName.Length > 15 ? "long-text" : "") @(item.isEnabled ? "station_enabled" : "station_disabled")">@item.StationName</div>
+            <div>@item.Minutes</div>
+            <div>@item.LowestLevel</div>
+            <div>@item.HighestLevel</div>
+            <div class="truncate-text email @(item.Email.Length > 20 ? "long-text" : "")">@item.Email</div>
+            <div>
+                <a asp-page="/Forms/AddStation" asp-route-id="@item.ID" class="btn btn-primary mt-1">Edit</a>
+            </div>
+            <div>
+                <form method="post" asp-page-handler="UpdateStatus">
+                    <input type="hidden" name="id" value="@item.ID" />
+                    <input type="hidden" name="isEnabled" value="@(item.isEnabled ? "false" : "true")" />
+                    <button type="submit" class="btn @(item.isEnabled ? "btn-danger" : "btn-success") mt-1">
+                        @(item.isEnabled ? "Disable" : "Enable")
+                    </button>
+                </form>
+            </div>
+        </div>
+    }
+</div>
 
 @section Scripts {
     <script src="~/js/search.js"></script>
@@ -67,11 +68,6 @@
         text-align: center;
     }
 
-    .header {
-        background-color: paleturquoise;
-        font-weight: bold;
-    }
-
     .truncate-text {
         overflow: hidden;
         text-overflow: ellipsis;
@@ -82,4 +78,9 @@
         text-align: left;
     }
 
+    /* Scrollable container styling */
+    .station-list-container {
+        max-height: 800px; /* Adjust height as needed */
+        overflow-y: auto;
+    }
 </style>

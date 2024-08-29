@@ -23,7 +23,7 @@ async function drawChart() {
                     return {
                         label: stationData.StationName,
                         data: values.map((value, index) => ({ x: timestamps[index], y: value })),
-                        borderColor: getRandomColor(),
+                        borderColor: rgba(33, 199, 162, 0.2),
                         borderWidth: 1,
                         fill: false
                     };
@@ -77,8 +77,8 @@ async function drawChart() {
                 myChart.data.datasets = [{
                     label: 'Surface Level',
                     data: values.map((value, index) => ({ x: timestamps[index], y: value })),
-                    backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                    borderColor: 'rgba(255, 99, 132, 1)',
+                    backgroundColor: 'rgba(33, 199, 162, 0.2)',
+                    borderColor: 'rgba(33, 199, 162, 1)',
                     borderWidth: 1,
                     fill: false
                 }];
@@ -92,8 +92,9 @@ async function drawChart() {
                         datasets: [{
                             label: 'Surface Level',
                             data: values.map((value, index) => ({ x: timestamps[index], y: value })),
-                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                            borderColor: 'rgba(255, 99, 132, 1)',
+                            //backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            backgroundColor: 'rgba(33, 199, 162, 0.2)',
+                            borderColor: 'rgba(33, 199, 162, 1)',
                             borderWidth: 1,
                             fill: false
                         }]

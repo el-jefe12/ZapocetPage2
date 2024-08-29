@@ -1,0 +1,344 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Appky\\TexasGuyContractIdentity\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\history.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:services\\notificationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\models\\services\\historyentryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:models\\services\\historyentryservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\history.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\history.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:services\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\config.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\config.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\forms\\addstation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\forms\\addstation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\config.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\config.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\graph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\graph.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\wwwroot\\css\\visuals.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:wwwroot\\css\\visuals.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\wwwroot\\js\\chart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:wwwroot\\js\\chart.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/texasGuyDB/True/SqlTable/dbo.SmtpModels.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\stations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\stations.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\api\\stationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\api\\stationscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\forms\\addhistoryentry.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\forms\\addhistoryentry.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|d:\\appky\\texasguycontractidentity\\pages\\forms\\addhistoryentry.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{64EC0D48-E84B-48DF-983E-885FDD3AA7E0}|TexasGuyContractIdentity.csproj|solutionrelative:pages\\forms\\addhistoryentry.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.css",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-15T14:54:03.364Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Config.cshtml",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Config.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Config.cshtml",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Config.cshtml",
+              "RelativeToolTip": "Pages\\Config.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwEgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T18:44:33.084Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "History.cshtml",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\History.cshtml",
+              "RelativeDocumentMoniker": "Pages\\History.cshtml",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\History.cshtml",
+              "RelativeToolTip": "Pages\\History.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T18:44:33.1Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Config.cshtml.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Config.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Config.cshtml.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Config.cshtml.cs",
+              "RelativeToolTip": "Pages\\Config.cshtml.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA1wG8AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.081Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "NotificationService.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Services\\NotificationService.cs",
+              "RelativeDocumentMoniker": "Services\\NotificationService.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Services\\NotificationService.cs",
+              "RelativeToolTip": "Services\\NotificationService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Pages\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAIwDkAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T18:44:33.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HistoryEntryService.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Models\\Services\\HistoryEntryService.cs",
+              "RelativeDocumentMoniker": "Models\\Services\\HistoryEntryService.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Models\\Services\\HistoryEntryService.cs",
+              "RelativeToolTip": "Models\\Services\\HistoryEntryService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEgAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.093Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "History.cshtml.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\History.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\History.cshtml.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\History.cshtml.cs",
+              "RelativeToolTip": "Pages\\History.cshtml.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.092Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Services\\EmailSender.cs",
+              "RelativeDocumentMoniker": "Services\\EmailSender.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Services\\EmailSender.cs",
+              "RelativeToolTip": "Services\\EmailSender.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.085Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAADgv04AAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AddStation.cshtml",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Forms\\AddStation.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Forms\\AddStation.cshtml",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Forms\\AddStation.cshtml",
+              "RelativeToolTip": "Pages\\Forms\\AddStation.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T18:44:33.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "visuals.css",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\wwwroot\\css\\visuals.css",
+              "RelativeDocumentMoniker": "wwwroot\\css\\visuals.css",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\wwwroot\\css\\visuals.css",
+              "RelativeToolTip": "wwwroot\\css\\visuals.css",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAABQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-08-13T18:44:33.09Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Graph.cshtml",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Graph.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Graph.cshtml",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Graph.cshtml",
+              "RelativeToolTip": "Pages\\Graph.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T18:44:33.088Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "chart.js",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\wwwroot\\js\\chart.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\chart.js",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\wwwroot\\js\\chart.js",
+              "RelativeToolTip": "wwwroot\\js\\chart.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAHUAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-08-13T18:44:33.086Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "dbo.SmtpModels.sql",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/texasGuyDB/True/SqlTable/dbo.SmtpModels.sql",
+              "ToolTip": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/texasGuyDB/True/SqlTable/dbo.SmtpModels.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-05T15:05:46.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAgAAAAlAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.098Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "StationsController.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\API\\StationsController.cs",
+              "RelativeDocumentMoniker": "Pages\\API\\StationsController.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\API\\StationsController.cs",
+              "RelativeToolTip": "Pages\\API\\StationsController.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAiwFIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Stations.cshtml",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Stations.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Stations.cshtml",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Stations.cshtml",
+              "RelativeToolTip": "Pages\\Stations.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T18:44:33.101Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "AddHistoryEntry.cshtml.cs",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Forms\\AddHistoryEntry.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\Forms\\AddHistoryEntry.cshtml.cs",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Forms\\AddHistoryEntry.cshtml.cs",
+              "RelativeToolTip": "Pages\\Forms\\AddHistoryEntry.cshtml.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwDsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-13T18:44:33.102Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AddHistoryEntry.cshtml",
+              "DocumentMoniker": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Forms\\AddHistoryEntry.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Forms\\AddHistoryEntry.cshtml",
+              "ToolTip": "D:\\Appky\\TexasGuyContractIdentity\\Pages\\Forms\\AddHistoryEntry.cshtml",
+              "RelativeToolTip": "Pages\\Forms\\AddHistoryEntry.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-08-13T18:44:33.104Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

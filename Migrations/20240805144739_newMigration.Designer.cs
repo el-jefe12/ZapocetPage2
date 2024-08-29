@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TexasGuyContractIdentity.Data;
 
@@ -11,9 +12,11 @@ using TexasGuyContractIdentity.Data;
 namespace TexasGuyContractIdentity.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240805144739_newMigration")]
+    partial class newMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -238,7 +241,7 @@ namespace TexasGuyContractIdentity.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("ApiTokens", (string)null);
+                    b.ToTable("ApiTokens");
                 });
 
             modelBuilder.Entity("TexasGuyContractIdentity.Models.History", b =>
@@ -262,7 +265,7 @@ namespace TexasGuyContractIdentity.Migrations
 
                     b.HasIndex("StationID");
 
-                    b.ToTable("HistoryEntries", (string)null);
+                    b.ToTable("HistoryEntries");
                 });
 
             modelBuilder.Entity("TexasGuyContractIdentity.Models.Stations", b =>
@@ -294,7 +297,7 @@ namespace TexasGuyContractIdentity.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("StationsEntries", (string)null);
+                    b.ToTable("StationsEntries");
                 });
 
             modelBuilder.Entity("TexasGuyContractIdentity.Models.Users", b =>
@@ -327,7 +330,7 @@ namespace TexasGuyContractIdentity.Migrations
 
                     b.HasKey("ID");
 
-                    b.ToTable("UsersEntries", (string)null);
+                    b.ToTable("UsersEntries");
                 });
 
             modelBuilder.Entity("TexasGuyContractIdentity.Pages.ConfigModel+SmtpModel", b =>
@@ -350,7 +353,7 @@ namespace TexasGuyContractIdentity.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("SmtpModels", (string)null);
+                    b.ToTable("SmtpModels");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

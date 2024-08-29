@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\Appky\\TexasGuyContractIdentity\\TexasGuyContractIdentity.csproj": {}
+    "H:\\Appky\\TexasGuyContractIdentity\\TexasGuyContractIdentity.csproj": {}
   },
   "projects": {
-    "G:\\Appky\\TexasGuyContractIdentity\\TexasGuyContractIdentity.csproj": {
+    "H:\\Appky\\TexasGuyContractIdentity\\TexasGuyContractIdentity.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\Appky\\TexasGuyContractIdentity\\TexasGuyContractIdentity.csproj",
+        "projectUniqueName": "H:\\Appky\\TexasGuyContractIdentity\\TexasGuyContractIdentity.csproj",
         "projectName": "TexasGuyContractIdentity",
-        "projectPath": "G:\\Appky\\TexasGuyContractIdentity\\TexasGuyContractIdentity.csproj",
+        "projectPath": "H:\\Appky\\TexasGuyContractIdentity\\TexasGuyContractIdentity.csproj",
         "packagesPath": "C:\\Users\\John\\.nuget\\packages\\",
-        "outputPath": "G:\\Appky\\TexasGuyContractIdentity\\obj\\",
+        "outputPath": "H:\\Appky\\TexasGuyContractIdentity\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "D:\\Visual Studio 2022 SDK\\NuGetPackages"

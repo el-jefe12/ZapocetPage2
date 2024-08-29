@@ -1,22 +1,36 @@
+/* Base font size for different screen widths */
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
-}
-
-html {
-  position: relative;
-  min-height: 100%;
-}
-
+/* Remove default margin for body and set flex layout */
 body {
-  margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Make sure body covers full viewport height */
+    margin: 0;
+}
+
+/* Focus styles for various interactive elements */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus,
+.form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+/* Allow main container to fill remaining space */
+.container.flex-grow-1 {
+    flex: 1;
+}
+
+/* Footer styles */
+.footer {
+    background-color: #f8f9fa; /* Light gray background */
+    padding: 10px 0; /* Vertical padding */
+    text-align: center; /* Center text */
 }

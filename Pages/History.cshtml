@@ -3,113 +3,218 @@
 @{
     ViewData["Title"] = "History";
 }
+<div class="history_page">
+    <div class="row align-items-center" style="float:right;">
+        <!-- Toggle Auto-Refresh Button -->
+        <button id="toggleAutoRefresh" class="btn mt-2" onclick="toggleAutoRefresh()">Enable Auto-Refresh</button>
+    </div>
 
-<div class="row align-items-center" style="float:right;">
-    <a asp-page="/Forms/AddHistoryEntry" class="btn btn-primary mt-2">Add new Entry (Beta)</a>
-</div>
+    <h1>@ViewData["Title"] (@Model.TotalItems)</h1>
 
-<h1>@ViewData["Title"] (@Model.HistoryList.Count())</h1>
+    <!-- Search bar -->
+    <input type="text" id="searchInput" onkeyup="search('searchInput', 'historyEntryContainer', ['station_name', 'status'])" placeholder="Search...">
 
+    <p>This page shows historical something.</p>
 
-<!-- Search bar -->
-<input type="text" id="searchInput" onkeyup="search('searchInput', 'historyRow', ['station_name', 'status'])" placeholder="Search...">
-
-<p>This page shows historical something.</p>
-
-<hr />
-<div class="row" style="background-color: paleturquoise; font-weight: bold;">
-    <div class="col">ID</div>
-    <div class="col">Station Name</div>
-    <div class="col">Value</div>
-    <div class="col">Time</div>
-    <div class="col">Status</div>
-</div>
-
-@foreach (var item in Model.HistoryList)
-{
-    <hr>
-    <div class="row historyRow">
-        <div class="col">@item.ID</div>
-        <div class="col">
-            <span class="station_name">@item.Station.StationName</span>
-        </div>
-        <div class="col">
-            <span class="@GetValueColorClass(item.Value)" style="font-weight: bold;">@item.Value</span>
-        </div>
-        <div class="col">@item.Timestamp</div>
-        <div class="col status">
-            <span class="@GetStatusColorClass(item.Value)"style="font-weight: bold;">@GetStatus(item.Value)</span> <!--Status-->
+    <!-- Items per page controls -->
+    <div class="row align-items-center">
+        <div>
+            <button class="btn btn-secondary" onclick="changeItemsPerPage(5)">5</button>
+            <button class="btn btn-secondary" onclick="changeItemsPerPage(10)">10</button>
+            <button class="btn btn-secondary" onclick="changeItemsPerPage(20)">20</button>
         </div>
     </div>
+
+    <br />
+
+    <!-- Sortable headers -->
+    <div class="row header">
+        <div class="col">
+            <a href="@Url.Page("/History", new { sortBy = "ID", sortOrder = Model.SortOrder == "asc" ? "desc" : "asc", currentPage = Model.CurrentPage, itemsPerPage = Model.ItemsPerPage })">ID</a>
+        </div>
+        <div class="col">
+            <a href="@Url.Page("/History", new { sortBy = "StationName", sortOrder = Model.SortOrder == "asc" ? "desc" : "asc", currentPage = Model.CurrentPage, itemsPerPage = Model.ItemsPerPage })">Station Name</a>
+        </div>
+        <div class="col">
+            <a href="@Url.Page("/History", new { sortBy = "Value", sortOrder = Model.SortOrder == "asc" ? "desc" : "asc", currentPage = Model.CurrentPage, itemsPerPage = Model.ItemsPerPage })">Value</a>
+        </div>
+        <div class="col">
+            <a href="@Url.Page("/History", new { sortBy = "Timestamp", sortOrder = Model.SortOrder == "asc" ? "desc" : "asc", currentPage = Model.CurrentPage, itemsPerPage = Model.ItemsPerPage })">Time</a>
+        </div>
+        <div class="col">
+            <a href="@Url.Page("/History", new { sortBy = "Status", sortOrder = Model.SortOrder == "asc" ? "desc" : "asc", currentPage = Model.CurrentPage, itemsPerPage = Model.ItemsPerPage })">Status</a>
+        </div>
+    </div>
+
+    @foreach (var item in Model.HistoryList)
+    {
+        <div class="historyEntryContainer">
+            <hr class="item-separator">
+            <div class="row historyRow">
+                <div class="col">@item.ID</div>
+                <div class="col">
+                    <span class="station_name">@item.Station.StationName</span>
+                </div>
+                <div class="col">
+                    <span class="@GetValueColorClass(item.Value)" style="font-weight: bold;">@item.Value</span>
+                </div>
+                <div class="col">@item.Timestamp</div>
+                <div class="col status">
+                    <span class="@GetStatusColorClass(item.Value)" style="font-weight: bold;">@GetStatus(item.Value)</span>
+                </div>
+            </div>
+            <br />
+        </div>
+    }
+
+    <!-- Pagination controls -->
+    <nav aria-label="Page navigation">
+        <ul class="pagination" id="paginationControls">
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+                    <a class="page-link" href="@Url.Page("/History", new { currentPage = i, itemsPerPage = Model.ItemsPerPage, sortBy = Model.SortBy, sortOrder = Model.SortOrder })">@i</a>
+                </li>
+            }
+        </ul>
+    </nav>
+
+    <br />
+</div>
+
+@section Scripts {
+    <script src="~/js/search.js"></script>
+    <script>
+        // Check if auto-refresh is enabled in localStorage
+        var autoRefreshEnabled = localStorage.getItem('autoRefreshEnabled') === 'true';
+
+        // Set the button state and color based on the current state
+        updateButtonState();
+
+        // Function to toggle auto-refresh
+        function toggleAutoRefresh() {
+            autoRefreshEnabled = !autoRefreshEnabled;
+            localStorage.setItem('autoRefreshEnabled', autoRefreshEnabled);
+            updateButtonState();
+
+            if (autoRefreshEnabled) {
+                startAutoRefresh();
+            } else {
+                stopAutoRefresh();
+            }
+        }
+
+        // Function to update button text and color
+        function updateButtonState() {
+            var button = document.getElementById('toggleAutoRefresh');
+            if (autoRefreshEnabled) {
+                button.textContent = 'Disable Auto-Refresh';
+                button.classList.remove('btn-primary');
+                button.classList.add('btn-danger'); // Red color for enabled
+            } else {
+                button.textContent = 'Enable Auto-Refresh';
+                button.classList.remove('btn-danger');
+                button.classList.add('btn-primary'); // Blue color for disabled
+            }
+        }
+
+        // Function to start auto-refresh
+        function startAutoRefresh() {
+            window.autoRefreshInterval = setInterval(function () {
+                location.reload();
+            }, 5000); // Refresh every 5 seconds
+        }
+
+        // Function to stop auto-refresh
+        function stopAutoRefresh() {
+            clearInterval(window.autoRefreshInterval);
+        }
+
+        // If auto-refresh was enabled on page load, start it
+        if (autoRefreshEnabled) {
+            startAutoRefresh();
+        }
+
+        function changeItemsPerPage(itemsPerPage) {
+            var searchTerm = encodeURIComponent(document.getElementById('searchInput').value);
+            window.location.href = '@Url.Page("/History")' +
+                '?itemsPerPage=' + itemsPerPage +
+                '&currentPage=1' +
+                '&sortBy=' + encodeURIComponent('@Model.SortBy') +
+                '&sortOrder=' + encodeURIComponent('@Model.SortOrder') +
+                '&searchTerm=' + searchTerm;
+        }
+
+        function paginate(page) {
+            var searchTerm = encodeURIComponent(document.getElementById('searchInput').value);
+            window.location.href = '@Url.Page("/History")' +
+                '?currentPage=' + page +
+                '&itemsPerPage=' + @Model.ItemsPerPage +
+                '&sortBy=' + encodeURIComponent('@Model.SortBy') +
+                '&sortOrder=' + encodeURIComponent('@Model.SortOrder') +
+                '&searchTerm=' + searchTerm;
+        }
+    </script>
 }
 
 @functions {
-    // Function to get color class based on value
     string GetValueColorClass(double value)
     {
-        string colorClass = "";
-
         if (value <= 30)
         {
-            colorClass = "status_drought";
+            return "status_drought";
         }
         else if (value <= 70)
         {
-            colorClass = "status_ok";
+            return "status_ok";
+        }
+        else if (value > 89)
+        {
+            return "status_death";
         }
         else
         {
-            colorClass = "status_flood";
+            return "status_flood";
         }
-
-        return colorClass;
     }
 
-    // Function to get color class based on status
     string GetStatusColorClass(double value)
     {
-        string colorClass = "";
-
         if (value <= 30)
         {
-            colorClass = "status_drought";
+            return "status_drought";
         }
         else if (value <= 70)
         {
-            colorClass = "status_ok";
+            return "status_ok";
+        }
+        else if (value > 89)
+        {
+            return "status_death";
         }
         else
         {
-            colorClass = "status_flood";
+            return "status_flood";
         }
-
-        return colorClass;
     }
 
-    // Function to get status based on value
     string GetStatus(double value)
     {
-        string status = "";
-
         if (value <= 30)
         {
-            status = "Sucho";
+            return "Sucho";
         }
         else if (value <= 70)
         {
-            status = "OK";
+            return "OK";
+        }
+        else if (value > 89)
+        {
+            return "Smrt";
         }
         else
         {
-            status = "Povodeň";
+            return "Povodeň";
         }
-
-        return status;
     }
 }
-
-<!-- JavaScript to filter rows based on search input -->
-@section Scripts {
-    <script src="~/js/search.js"></script>
-}
-
