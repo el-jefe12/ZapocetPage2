@@ -1272,3 +1272,4 @@ H:\Appky\TexasGuyContractIdentity\obj\Debug\net8.0\refint\TexasGuyContractIdenti
 H:\Appky\TexasGuyContractIdentity\obj\Debug\net8.0\TexasGuyContractIdentity.pdb
 H:\Appky\TexasGuyContractIdentity\obj\Debug\net8.0\TexasGuyContractIdentity.genruntimeconfig.cache
 H:\Appky\TexasGuyContractIdentity\obj\Debug\net8.0\ref\TexasGuyContractIdentity.dll
+H:\Appky\TexasGuyContractIdentity\bin\Debug\net8.0\System.Text.Json.dll

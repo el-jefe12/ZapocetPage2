@@ -8,6 +8,8 @@ using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using TexasGuyContractIdentity.Data;
+using TexasGuyContractIdentity.Models.API;
+using TexasGuyContractIdentity.Services;
 
 namespace TexasGuyContractIdentity.Pages
 {
@@ -16,12 +18,14 @@ namespace TexasGuyContractIdentity.Pages
         private readonly IEmailSender _emailSender;
         private readonly ApplicationDbContext _context;
         private readonly ILogger<ConfigModel> _logger;
+        private readonly TokenService _tokenService;
 
-        public ConfigModel(ApplicationDbContext context, ILogger<ConfigModel> logger, IEmailSender emailSender)
+        public ConfigModel(ApplicationDbContext context, ILogger<ConfigModel> logger, IEmailSender emailSender, TokenService tokenService)
         {
             _context = context;
             _logger = logger;
             _emailSender = emailSender;
+            _tokenService = tokenService;
         }
 
         [BindProperty]
@@ -34,10 +38,12 @@ namespace TexasGuyContractIdentity.Pages
         public SmtpSelectionModel SmtpSelection { get; set; }
 
         public List<SmtpModel> SmtpList { get; set; }
+        public List<ApiToken> ApiTokens { get; set; }
 
         public async Task OnGetAsync()
         {
             SmtpList = await _context.SmtpModels.ToListAsync();
+            ApiTokens = await _context.ApiTokens.ToListAsync();
         }
 
         public async Task<IActionResult> OnPostSendTestMailAsync()
@@ -108,6 +114,13 @@ namespace TexasGuyContractIdentity.Pages
             await _context.SaveChangesAsync();
 
             TempData["Message"] = "SMTP selected successfully!";
+            return RedirectToPage();
+        }
+
+        public async Task<IActionResult> OnPostGenerateTokenAsync()
+        {
+            var token = await _tokenService.CreateTokenAsync();
+            TempData["Message"] = $"Token generated successfully: {token.Token}";
             return RedirectToPage();
         }
 

@@ -2,21 +2,29 @@
 html, body {
     height: 100%;
     margin: 0;
-    padding: 0;
+}
+
+/* Body styling */
+body {
     display: flex;
     flex-direction: column;
-}
-
-/* Global styles */
-body {
+    min-height: 100vh;
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, #ffffff, #ccf3ff);
-    flex-grow: 1; /* Allow body to grow and fill the available space */
 }
 
-/* Main content container to fill the remaining space */
-.main-content {
-    flex-grow: 1;
+/* Main content container */
+main {
+    flex: 1; /* Allows main content to take up remaining space */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #336699; /* Adjust color as needed */
+    padding: 15px 0;
+    color: #ffffff;
+    text-align: center;
+    margin-top: auto; /* Push footer to the bottom */
 }
 
 /* Light visual class */
@@ -59,7 +67,7 @@ body {
     color: firebrick;
 }
 
-/* Clock */
+/* Clock styling */
 #clock {
     font-size: 1.2rem;
     font-weight: bold;
@@ -88,11 +96,9 @@ body {
 
     .navbar-nav .nav-link:hover {
         color: #ccf32f;
-        font-weight: bold;
-        text-transform: uppercase;
     }
 
-/* Header */
+/* Header styling */
 .header {
     background-color: #336699;
     padding: 15px 0;
@@ -102,22 +108,25 @@ body {
     text-transform: uppercase;
 }
 
-/* Footer */
-.footer {
-    background-color: #336699;
-    padding: 15px 0;
-    color: #ffffff;
-    text-align: center;
-    margin-top: auto; /* Push footer to the bottom */
-}
-
-    .footer a {
-        color: #ffffff;
-        text-decoration: none;
-    }
-
 /* Custom button */
 .name_button_custom {
     font-size: 1.1rem;
     color: black;
+}
+
+/* Font size adjustments */
+html {
+    font-size: 14px; /* Default font size */
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px; /* Larger font size for wider screens */
+    }
+}
+
+/* Focus styles */
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus,
+.form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }

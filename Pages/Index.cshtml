@@ -4,14 +4,52 @@
     ViewData["Title"] = "Home page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-
-    <a asp-page="/Forms/AddStation" class="btn btn-primary mt-4">Add new Station</a>
-
-    <a asp-page="/Forms/AddHistoryEntry" class="btn btn-primary mt-4">Create History Entry</a>
-
-    <a asp-page="/Edit/SendMailTest" class="btn btn-primary mt-4">Send Email</a>
-
+<div class="container mt-5">
+    <div class="row justify-content-start">
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-center" style="background-color: #4682B4; color: white; height: 300px; display: flex; align-items: center; justify-content: center;">
+                <div class="card-body">
+                    <h5 class="card-title">Stations</h5>
+                    <p class="card-text">View and manage all stations.</p>
+                    <a asp-page="/Stations" class="btn btn-light">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-center" style="background-color: #1E90FF; color: white; height: 300px; display: flex; align-items: center; justify-content: center;">
+                <div class="card-body">
+                    <h5 class="card-title">History</h5>
+                    <p class="card-text">View the history of station entries.</p>
+                    <a asp-page="/History" class="btn btn-light">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-center" style="background-color: #007BFF; color: white; height: 300px; display: flex; align-items: center; justify-content: center;">
+                <div class="card-body">
+                    <h5 class="card-title">Config</h5>
+                    <p class="card-text">Configure the system settings.</p>
+                    <a asp-page="/Config" class="btn btn-light">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-center" style="background-color: #0056b3; color: white; height: 300px; display: flex; align-items: center; justify-content: center;">
+                <div class="card-body">
+                    <h5 class="card-title">Graphs</h5>
+                    <p class="card-text">Visualize data through graphs.</p>
+                    <a asp-page="/Graph" class="btn btn-light">Go</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card text-center" style="background-color: #003580; color: white; height: 300px; display: flex; align-items: center; justify-content: center;">
+                <div class="card-body">
+                    <h5 class="card-title">Privacy</h5>
+                    <p class="card-text">View the privacy policy.</p>
+                    <a asp-page="/Privacy" class="btn btn-light">Go</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

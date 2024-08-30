@@ -38,6 +38,7 @@ builder.Services.AddHangfire(configuration => configuration
 builder.Services.AddRazorPages();
 builder.Services.AddControllers();
 
+builder.Services.AddTransient<TokenService>();
 // Register EmailSender service
 builder.Services.AddTransient<IEmailSender, EmailSender>();
 
@@ -78,7 +79,6 @@ app.UseEndpoints(endpoints =>
     endpoints.MapRazorPages();  // Map Razor Pages
     endpoints.MapControllers(); // Map API controllers
 });
-
 
 // Register a Hangfire job to run after the application starts
 app.Services.GetRequiredService<IHostApplicationLifetime>().ApplicationStarted.Register(() =>

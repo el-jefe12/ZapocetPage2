@@ -17,6 +17,8 @@
     <div class="alert alert-success">@TempData["Message"]</div>
 }
 
+<hr>
+<div class="station-list-container">
 <form method="post" asp-page-handler="SendTestMail">
     <div class="form-group">
         <label for="email">Email Address:</label>
@@ -71,4 +73,36 @@
     <button class="btn btn-primary mt-4" type="submit">Change</button>
 </form>
 
+<hr />
 
+<h3>Generate API Token</h3>
+<p>Click the button below to generate a new API token.</p>
+
+<form method="post" asp-page-handler="GenerateToken">
+    <button class="btn btn-primary mt-4" type="submit">Generate Token</button>
+</form>
+
+<hr />
+
+<h3>API Tokens</h3>
+<p>Here are your generated API tokens.</p>
+
+@if (Model.ApiTokens != null)
+{
+    <ul>
+        @foreach (var token in Model.ApiTokens)
+        {
+            <li>@token.Token - @token.CreatedAt.ToString("g") - @(token.ExpiresAt.HasValue ? token.ExpiresAt.Value.ToString("g") : "No Expiry")</li>
+        }
+    </ul>
+}
+</div>
+<hr>
+
+<style>
+    /* Scrollable container styling */
+    .station-list-container {
+        max-height: 60%; /* Adjust height as needed */
+        overflow-y: auto;
+    }
+</style>
